@@ -12,7 +12,22 @@ def main():
     ######################
     # WRITE YOUR CODE HERE
     ######################    
+total_rainfall = 0
+months_count = 0
 
+years = int(input("Enter the number of years: "))
 
-if __name__ == '__main__':
-    main()
+for year in range(1, years + 1):
+    print(f"Year {year}")
+    for month in range(1, 13):
+        rainfall = float(input(f"Enter inches of rainfall for month {month}: "))
+
+total_rainfall += rainfall
+months_count += 1
+
+average_rainfall = total_rainfall / months_count if months_count > 0 else 0
+
+print("\nRainfall Statistics:")
+print(f"Total months: {months_count}")
+print(f"Total inches of rainfall: {total_rainfall:.2f}")
+print(f"Average rainfall per month: {average_rainfall:.2f} inches")
