@@ -12,7 +12,16 @@ def main():
     total = 0.0
 
     ######################
-    # WRITE YOUR CODE HERE
+  budget = float(input("Enter your monthly budget: "))
+total_expenses = 0
+
+while (expense := input("Enter expense (or 'done' to finish): ").lower()) != 'done':
+        total_expenses += float(expense)
+
+balance = budget - total_expenses
+print(f"\nBudget: ${budget:.2f}\nExpenses: ${total_expenses:.2f}\nBalance: ${balance:.2f}")
+print("Under budget!" if balance > 0 else "Over budget!" if balance < 0 else "Exactly on budget!")
+
     ######################
 
 
